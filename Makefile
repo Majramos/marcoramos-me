@@ -20,12 +20,13 @@ test:
 verify: lint style test
 
 build:
-    python scripts/build.py
+    uv run python scripts/build.py
 
 clean:
     find . -type d -name __pycache__ -exec rm -rf {} +
     find . -type d -name "*.pyc" -delete
     rm -rf .pytest_cache .ruff_cache .mypy_cache
+    rm -rf build
 
 ping:
     ping -c 3 marcoramos.me
