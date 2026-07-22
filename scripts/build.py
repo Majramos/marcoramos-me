@@ -7,6 +7,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from scripts.constants import SRC, BUILD
 
+
 def build_site() -> None:
     data = json.loads((SRC / "data" / "site.json").read_text(encoding="utf-8"))
 
