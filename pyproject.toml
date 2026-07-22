@@ -25,3 +25,29 @@ build-backend = "uv_build"
 [tool.uv.build-backend]
 module-name = "scripts"
 module-root = ""
+
+[tool.mypy]
+python_version = "3.13"
+files = ["scripts", "tests"]
+explicit_package_bases = true
+
+[tool.pytest.ini_options]
+addopts = "--cov=scripts --cov-report=term-missing"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["scripts"]
+omit = ["tests/*", "**/__init__.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 60
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "pep440"
+version_provider = "uv"
+update_changelog_on_bump = true
+major_version_zero = true
