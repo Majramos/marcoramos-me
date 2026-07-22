@@ -12,7 +12,7 @@ lint:
     uv run ruff check .
 
 style:
-    uv run mypy src tests
+    uv run mypy scripts tests
 
 test:
     uv run pytest
