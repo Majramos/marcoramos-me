@@ -1,0 +1,26 @@
+<section id="timeline">
+    <div class="title">
+        <h2>TIMELINE</h2>
+    </div>
+    <div>
+        {% for item in timeline %}
+        <div>
+            <div class="square"></div>
+            <div class="text">
+                <div>
+                    {% if item.start != None %}{{ item.start }} - {% endif %}{%
+                    if item.end == None %}PRESENT{% else %}{{ item.end }}{%
+                    endif %}
+                </div>
+                <div>
+                    <h3>{{ item.title }}</h3>
+                    <h6>{{ item.where }}</h6>
+                    {% for desc in item.description %}
+                    <p>{{ desc }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,25 @@
+<section id="projects">
+    <div class="title">
+        <h2>PROJECTS</h2>
+    </div>
+    <div>
+        {% for project in projects %}
+        <article id="{{ project.id }}">
+            <a href="{{ project.url }}">
+                <div>
+                    <span>{{ project.name }}</span>
+                </div>
+                <div>
+                    <h3>{{ project.name | replace('-', ' ') | title }}</h3>
+                    <p>{{ project.description }}</p>
+                    <div>
+                        {% for keyword in project.keywords %}
+                        <span>{{ keyword }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </a>
+        </article>
+        {% endfor %}
+    </div>
+</section>
