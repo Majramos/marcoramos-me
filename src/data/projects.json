@@ -1,0 +1,37 @@
+[
+  {
+    "id": "proj1",
+    "name": "ticktask",
+    "description": "Pomodoro-style terminal task manager",
+    "url": "https://gitlab.com/majramos/ticktask",
+    "keywords": ["python", "terminal"]
+  },
+  {
+    "id": "proj2",
+    "name": "bank-to-actualbudget",
+    "description": "convert bank extracts to transactions for actualbudget",
+    "url": "https://gitlab.com/majramos/bank-to-actualbudget",
+    "keywords": ["python", "data"]
+  },
+  {
+    "id": "proj3",
+    "name": "notebook",
+    "description": "My personal notebook, a collection of insights and explorations across the fascinating realms of programming, Python, and data science",
+    "url": "https://gitlab.com/majramos/notebook",
+    "keywords": ["notes", "programming", "data-science"]
+  },
+  {
+    "id": "proj4",
+    "name": "holidays-pt",
+    "description": "Dynamically calculate the holidays dates from Portugal, both national and regional holidays for each district and county",
+    "url": "https://gitlab.com/majramos/holidays-pt",
+    "keywords": ["python", "timeseries"]
+  },
+  {
+    "id": "proj5",
+    "name": "codetags",
+    "description": "Manage code comment markup in sections of code that need closer inspection or review",
+    "url": "https://gitlab.com/majramos/codetags",
+    "keywords": ["python", "tags"]
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "title": "Marco Ramos",
+  "description": "Marco Ramos personal page, with work experience, education timeline, skills and projects. Marco is a data scientist with skills in data modeling and engineering",
+  "base_url": "marcoramos.me",
+  "last_update": "2026-07-22",
+  "first_name": "Marco",
+  "last_name": "Ramos",
+  "full_name": "Marco Ramos",
+  "contact_email": "contactme@marcoramos.me",
+  "urls": {
+    "linkedin": "https://linkedin.com/in/majramos",
+    "gitlab": "https://gitlab.com/majramos",
+    "github": "https://github.com/Majramos",
+    "codeberg": "https://codeberg.org/majramos",
+    "error": "./404.html",
+    "cv_download": "./404.html"
+  },
+  "footer_copyright_year": "2026",
+  "introduction": [
+    "I'm resourceful professional with a natural attitude to developing solutions for complex problems trough selection, interpretation and manipulation of the available data bringing high-quality business intelligence solutions to businesses seeking higher efficiency",
+    "Currently working as a data scientist / digital transformation specialist by developing and implementing data analyses, data collection systems and other strategies to provide the company with ideas that contribute to the decision-making processes"
+  ]
+}
