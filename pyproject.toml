@@ -3,6 +3,9 @@ name = "marcoramos-me"
 version = "0.1.0"
 description = "Simple static single-page site built with HTML, CSS, and Python"
 readme = "README.md"
+authors = [
+    { name = "Marco Ramos", email = "contactme@marcoramos.me" }
+]
 requires-python = ">=3.13"
 dependencies = [
     "jinja2>=3.1.6",
