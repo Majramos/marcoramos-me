@@ -7,6 +7,8 @@ workflow:
 stages:
   - lint
   - test
+  - build
+  - deploy
 
 variables:
   UV_CACHE_DIR: "$CI_PROJECT_DIR/.uv-cache"
@@ -52,3 +54,29 @@ run_tests:
     paths:
       - report.xml
       - coverage.xml
+
+build_site:
+  stage: build
+  image: python:3.13-slim
+  before_script:
+    - python -m pip install --no-cache-dir -r requirements.txt
+  script:
+    - python scripts/build.py
+  artifacts:
+    paths:
+      - build/
+    expire_in: 1 week
+
+deploy_pages:
+  stage: deploy
+  image: alpine:3.21
+  before_script: []
+  needs:
+    - job: build_site
+      artifacts: true
+  script:
+    - ":"
+  pages:
+    publish: build
+  rules:
+    - if: "$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH"
