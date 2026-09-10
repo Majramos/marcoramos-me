@@ -1,12 +1,12 @@
 <nav>
     <div>
-        <a href="#">{{ title }}</a>
+        <a href="./index.html">{{ meta.title }}</a>
         <div class="shortcuts">
             <a href="#projects">Projects</a>
             <a href="#timeline">Timeline</a>
-            <a href="mailto:{{ contact_email }}">Contact</a>
+            <a href="mailto:{{ meta.contact_email }}">Contact</a>
         </div>
-        <a href="/marco_ramos_cv.pdf">
+        <a href="{{ meta.urls.cv_download }}">
             <button class="cv">DOWNLOAD_CV</button>
         </a>
         <div id="nav-menu">
@@ -31,8 +31,8 @@
             <div class="dropdown" hidden>
                 <a href="#projects">Projects</a>
                 <a href="#timeline">Timeline</a>
-                <a href="mailto:{{ contact_email }}">Contact Me</a>
-                <a href="/marco_ramos_cv.pdf">Download CV</a>
+                <a href="mailto:{{ meta.contact_email }}">Contact Me</a>
+                <a href="{{ meta.urls.cv_download }}">Download CV</a>
             </div>
         </div>
     </div>
