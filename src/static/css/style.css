@@ -327,7 +327,8 @@ nav button {
     align-items: center;
 }
 
-nav button.cv {
+nav button.cv,
+section#error button.cv {
     border-width: 1px;
     display: none;
     font-family: Inter;
@@ -351,7 +352,8 @@ nav button.cv {
     font-weight: 600;
 }
 
-nav button.cv:hover {
+nav button.cv:hover,
+section#error button.cv:hover {
     box-shadow: 4px 4px 0px 0px var(--color-primary-container);
     transform: translate(-2px, -2px);
 }
@@ -924,4 +926,40 @@ section#timeline > div:nth-of-type(2) > div .text > div:nth-child(2) > p {
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 150ms;
     }
+}
+
+section#error {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 72px - 132px);
+    padding: var(--spacing-margin);
+    text-align: center;
+    border: 0;
+}
+
+section#error > div {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+}
+
+section#error p {
+    color: var(--color-primary-container);
+    font-family: var(--font-label-sm);
+    font-size: var(--fs-label-sm);
+}
+
+section#error h1 {
+    font-family: var(--font-headline-lg);
+    font-size: var(--fs-headline-lg);
+}
+
+section#error a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+section#error button.cv {
+    display: inline-flex;
 }
