@@ -21,6 +21,7 @@ verify: lint style test
 
 build:
     uv run python scripts/build.py
+    uv run python scripts/build_cv.py
 
 clean:
     find . -type d -name __pycache__ -exec rm -rf {} +
