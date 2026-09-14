@@ -62,6 +62,7 @@ build_site:
     - python -m pip install --no-cache-dir -r requirements.txt
   script:
     - python -m scripts.build
+    - python -m scripts.build_cv
   artifacts:
     paths:
       - build/
