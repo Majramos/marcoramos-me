@@ -927,7 +927,8 @@ section#timeline > div:nth-of-type(2) > div .text > div:nth-child(2) > p {
     }
 }
 
-section#error {
+section#error,
+section#qrcode {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -937,7 +938,8 @@ section#error {
     border: 0;
 }
 
-section#error > div {
+section#error > div,
+section#qrcode > div {
     display: grid;
     gap: 1rem;
     justify-items: center;
