@@ -2,42 +2,54 @@
   {
     "id": "work3",
     "type": "work",
-    "title": "Data Analyst",
+    "title": "Data Scientist / AI Enginner",
     "where": "Acquiring Department @ Revolut",
     "start": "March 2025",
     "end": null,
     "include": true,
     "description": [
-      "Working in Acquiring, specializing in the development and optimization of fraud controls targeting merchant activity. My role involves leveraging advanced data analytics to identify patterns, mitigate risks, and ensure the security of merchant activity. Develop robust BI and reporting solutions using Google Looker, providing actionable insights into fraud trends and control effectiveness. Develop of compliance and fraud bots utilizing Large Language Models, crafting custom prompts to enhance automated detection and response capabilities."
+      "Working in Acquiring, specializing in the development and optimization of fraud controls targeting merchant activity. My role involves leveraging advanced data analytics to identify patterns, mitigate risks, and ensure the security of merchant activity.",
+      "Develop robust BI and reporting solutions using Google Looker, providing actionable insights into fraud trends and control effectiveness.",
+      "Develop of compliance and fraud bots utilizing Large Language Models, crafting custom prompts to enhance automated detection and response capabilities."
     ]
   },
   {
     "id": "work2",
     "type": "work",
     "title": "Data Scientist / Engineer",
-    "where": "Comercial Business Unit @ Galp",
+    "where": "Comercial Business @ Galp",
     "start": "July 2020",
     "end": "February 2025",
     "include": true,
     "description": [
-      "Data Science: Conducted customer behavior studies to gain insights into retail customers' purchasing patterns. Developed segmentation models to identify optimal next actions. Developed forecast models to predict trends and patterns, ensuring accurate and reliable consumption forecasts. Utilized advanced data mining techniques, such as basket analysis, to understand customer purchasing behavior.",
-      "Data Engineering: Led MLOps development from initial design to successful production deployment, streamlining workflows and improving operational efficiency. Built efficient and scalable data models, ensuring optimal performance and data integrity. Additionally, built and maintained ETL pipelines, integrating data from various sources and ensuring high data quality through validation and cleansing. Optimized data querying and processing using SQL and Dremio’s capabilities, enhancing the overall efficiency of data workflows.",
-      "Data Analysis & Business Intelligence: Utilized BI tools and data analysis to provide actionable business insights and recommendations. Identify business needs and lead the creation of statistical reports and visualizations in Power BI, establishing data rules and KPIs. Implemented Power Automate to streamline workflows, significantly improving operational efficiency and productivity."
+      "Led MLOps development from initial design to successful production deployment, streamlining workflows and improving operational efficiency. Built efficient and scalable data models, ensuring optimal performance and data integrity. Additionally, built and maintained ETL pipelines, integrating data from various sources and ensuring high data quality through validation and cleansing. Optimized data querying and processing using SQL and Dremio’s capabilities, enhancing the overall efficiency of data workflows.",
+      "Conducted customer behavior studies to gain insights into retail customers' purchasing patterns. Developed segmentation models to identify optimal next actions. Developed forecast models to predict trends and patterns, ensuring accurate and reliable consumption forecasts. Utilized advanced data mining techniques, such as basket analysis, to understand customer purchasing behavior.",
+      "Utilized BI tools and data analysis to provide actionable business insights and recommendations. Identify business needs and lead the creation of statistical reports and visualizations in Power BI, establishing data rules and KPIs. Implemented Power Automate to streamline workflows, significantly improving operational efficiency and productivity."
     ]
   },
   {
     "id": "work1",
     "type": "work",
     "title": "Geoscience Specialist",
-    "where": "Upstream Business Unit @ Galp",
+    "where": "Upstream Business @ Galp",
     "start": "April 2017",
     "end": "July 2020",
     "include": true,
     "description": [
-      "Database Management: Organize and maintain corporate geological and GIS databases, ensuring data integrity and quality.",
-      "Decision Support & Modeling: Develop decision support packages, conduct value of information exercises, and implement optimized modeling, uncertainty, and sensitivity workflows with custom routines. Plan and execute comprehensive reservoir studies, performing seismic interpretation, and constructing complex structural and petrophysical models.",
-      "Project Support: Provide support for the Mozambique Rovuma LNG project and Angola Block 14 development projects."
+      "Organize and maintain corporate geological and GIS databases, ensuring data integrity and quality.",
+      "Develop decision support packages, conduct value of information exercises, and implement optimized modeling, uncertainty, and sensitivity workflows with custom routines. Plan and execute comprehensive reservoir studies, performing seismic interpretation, and constructing complex structural and petrophysical models.",
+      "Provide support for the Mozambique Rovuma LNG project and Angola Block 14 development projects."
     ]
+  },
+  {
+    "id": "school5",
+    "type": "education",
+    "title": "Google Cloud Certified Associated Cloud Enginner",
+    "where": "Google",
+    "start": null,
+    "end": "July 2026",
+    "include": true,
+    "description": []
   },
   {
     "id": "school4",
@@ -46,11 +58,8 @@
     "where": "IBM",
     "start": null,
     "end": "September 2024",
-    "include": true,
-    "description": [
-      "https://coursera.org/verify/professional-cert/2RDWY369KZUB",
-      "https://coursera.org/verify/professional-cert/2VNWREMJ6YNK"
-    ]
+    "include": false,
+    "description": []
   },
   {
     "id": "school3",

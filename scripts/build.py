@@ -1,35 +1,18 @@
-from __future__ import annotations
-
-import json
 import shutil
 from pathlib import Path
-from typing import TypeAlias
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from scripts.constants import PAGES, TEMPLATES, DATA, BUILD, STATIC
 from scripts.minify import minify_file
 from scripts.minifiers import CSSMinimizer, HTMLMinimizer, JavaScriptMinimizer
-
-
-JsonValue: TypeAlias = (
-    None | bool | int | float | str | list["JsonValue"] | dict[str, "JsonValue"]
-)
+from scripts.data import JsonValue, load_data
 
 
 def _reset_build_dir(build_dir: Path) -> None:
     if build_dir.exists():
         shutil.rmtree(build_dir)
     build_dir.mkdir(parents=True, exist_ok=True)
-
-
-def _load_data(data_dir: Path) -> dict[str, JsonValue]:
-    data: dict[str, JsonValue] = {}
-
-    for file in data_dir.glob("**/*.json"):
-        data[file.stem] = json.loads(file.read_text(encoding="utf-8"))
-
-    return data
 
 
 def _load_environment(templates_path: list[Path]) -> Environment:
@@ -61,7 +44,7 @@ def _minify_build_files(build_dir: Path) -> None:
 
 
 def build_site() -> None:
-    data = _load_data(DATA)
+    data = load_data(DATA)
 
     _reset_build_dir(BUILD)
 

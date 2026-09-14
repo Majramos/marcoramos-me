@@ -1,4 +1,5 @@
 [
+  { "id": 26, "name": "AirFlow", "level": 3 },
   { "id": 1, "name": "ArcGIS", "level": 3 },
   { "id": 2, "name": "Bash", "level": 2 },
   { "id": 3, "name": "Business Intelligence", "level": 4 },
@@ -10,9 +11,9 @@
   { "id": 9, "name": "GIS", "level": 3 },
   { "id": 10, "name": "Git", "level": 4 },
   { "id": 11, "name": "Gitlab|Github", "level": 3 },
+  { "id": 14, "name": "Google Looker", "level": 1 },
   { "id": 12, "name": "HTML", "level": 2 },
   { "id": 13, "name": "Javascript", "level": 1 },
-  { "id": 14, "name": "Looker", "level": 1 },
   { "id": 15, "name": "Machine Learning", "level": 5 },
   { "id": 16, "name": "Pandas", "level": 5 },
   { "id": 17, "name": "Powershell", "level": 2 },
