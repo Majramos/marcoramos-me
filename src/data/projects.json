@@ -25,13 +25,20 @@
     "name": "holidays-pt",
     "description": "Dynamically calculate the holidays dates from Portugal, both national and regional holidays for each district and county",
     "url": "https://gitlab.com/majramos/holidays-pt",
-    "keywords": ["python", "timeseries"]
+    "keywords": ["python", "data"]
   },
   {
     "id": "proj5",
     "name": "codetags",
     "description": "Manage code comment markup in sections of code that need closer inspection or review",
     "url": "https://gitlab.com/majramos/codetags",
-    "keywords": ["python", "tags"]
+    "keywords": ["python", "coding"]
+  },
+  {
+    "id": "proj6",
+    "name": "container-socket-proxy",
+    "description": "A dependency-free HTTP proxy that sits in front of a Podman or Docker socket and only forwards + rewrites allowed container groups",
+    "url": "https://gitlab.com/majramos/container-socket-proxy",
+    "keywords": ["python", "container"]
   }
 ]
