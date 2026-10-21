@@ -449,90 +449,6 @@ footer > div:nth-child(3) a:hover {
     color: var(--color-primary-container);
 }
 
-.text-label-sm {
-    font-family: var(--font-label-sm);
-    font-size: var(--fs-label-sm);
-    line-height: var(--lh-label-sm);
-    letter-spacing: var(--ls-label-sm);
-    font-weight: var(--fw-label-sm);
-}
-
-.text-button {
-    font-family: var(--font-button);
-    font-size: var(--fs-button);
-    line-height: var(--lh-button);
-    letter-spacing: var(--ls-button);
-    font-weight: var(--fw-button);
-}
-
-.text-body-lg {
-    font-family: var(--font-body-lg);
-    font-size: var(--fs-body-lg);
-    line-height: var(--lh-body-lg);
-    letter-spacing: var(--ls-body-lg);
-    font-weight: var(--fw-body-lg);
-}
-
-.text-body-md {
-    font-family: var(--font-body-md);
-    font-size: var(--fs-body-md);
-    line-height: var(--lh-body-md);
-    letter-spacing: var(--ls-body-md);
-    font-weight: var(--fw-body-md);
-}
-
-.text-display-lg {
-    font-family: var(--font-display-lg);
-    font-size: var(--fs-display-lg);
-    line-height: var(--lh-display-lg);
-    letter-spacing: var(--ls-display-lg);
-    font-weight: var(--fw-display-lg);
-}
-
-.text-headline-lg {
-    font-family: var(--font-headline-lg);
-    font-size: var(--fs-headline-lg);
-    line-height: var(--lh-headline-lg);
-    letter-spacing: var(--ls-headline-lg);
-    font-weight: var(--fw-headline-lg);
-}
-
-.text-headline-lg-mobile {
-    font-family: var(--font-headline-lg-mobile);
-    font-size: var(--fs-headline-lg-mobile);
-    line-height: var(--lh-headline-lg-mobile);
-    letter-spacing: var(--ls-headline-lg-mobile);
-    font-weight: var(--fw-headline-lg-mobile);
-}
-
-.rounded {
-    border-radius: var(--radius-default);
-}
-
-.rounded-lg {
-    border-radius: var(--radius-lg);
-}
-
-.rounded-xl {
-    border-radius: var(--radius-xl);
-}
-
-.rounded-full {
-    border-radius: var(--radius-full);
-}
-
-.container-max {
-    max-width: var(--spacing-container-max);
-}
-
-.gutter {
-    gap: var(--spacing-gutter);
-}
-
-.margin {
-    margin: var(--spacing-margin);
-}
-
 section {
     border-bottom-width: 1px;
     margin-left: auto;
@@ -676,104 +592,157 @@ section#landing p {
     max-width: 28rem;
 }
 
-section#projects article {
-    border: 1px solid var(--color-primary-container);
-    position: relative;
-}
+section#projects .projects-carousel {
+    --project-card-height: 16rem;
+    --project-card-width: calc(var(--project-card-height) * 2);
 
-section#projects > div:nth-of-type(2) {
+    --project-card-gap: var(--spacing-gutter);
+    --project-stagger: calc(
+        (var(--project-card-width) + var(--project-card-gap)) / 2
+    );
+
     display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1.5rem; /* gap-6 */
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, var(--project-card-height));
+    grid-auto-columns: var(--project-card-width);
+    align-items: start;
+    column-gap: var(--project-card-gap);
+    row-gap: var(--project-card-gap);
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: none;
+    scroll-padding-inline: var(--spacing-margin);
+    scrollbar-width: thin;
+    scroll-behavior: auto;
+
+    padding: 1rem;
 }
 
-section#projects article:focus-within {
-    outline-style: solid;
-    outline-width: 2px;
-    outline-offset: 4px;
-    outline-color: var(--color-primary);
+section#projects .project-card {
+    width: var(--project-card-width);
+    height: var(--project-card-height);
+    min-width: var(--project-card-width);
+    min-height: var(--project-card-height);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--color-primary-container);
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
 }
 
-section#projects article:hover {
-    box-shadow: 4px 4px 0px 0px var(--color-primary-container);
-    transform: translate(-2px, -2px);
+section#projects .project-card:nth-child(even) {
+    margin-left: var(--project-stagger);
 }
 
-section#projects article:active {
-    box-shadow: 0px 0px 0px 0px var(--color-primary-container);
-    transform: translate(0px, 0px);
+section#projects .project-card:focus-within {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;auto
 }
 
-section#projects article > a {
-    display: block;
-    height: 100%;
-    text-decoration: none;
-    color: inherit;
-}
-
-section#projects article > a > div:nth-child(1) {
+section#projects .project-card > a {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+section#projects .project-card__meta {
+    display: flex;
     align-items: center;
-    border-bottom-width: 1px;
-    border-color: var(--color-primary);
-    padding: 0.5rem; /* p-2 */
+    justify-content: space-between;
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--color-primary);
     background-color: var(--color-surface-container-high);
 }
 
-section#projects article > a > div:nth-child(1) > span {
+section#projects .project-card__meta > span {
     font-family: var(--font-label-sm);
     font-size: 12px;
     line-height: 1.4;
     font-weight: 400;
+    margin-left: auto;
+    padding-right: 0.5rem;
 }
 
-section#projects article > a > div:nth-child(2) {
+section#projects .project-card__content {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
-    flex-grow: 1;
+    min-height: 0;
     padding: 1.5rem;
 }
 
-section#projects article > a > div:nth-child(2) > h3 {
+section#projects .project-card__content > h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-on-surface);
     font-family: var(--font-label-sm);
     font-size: var(--fs-body-lg);
+    font-weight: var(--fw-body-lg);
     line-height: var(--lh-body-lg);
     letter-spacing: var(--ls-body-lg);
-    font-weight: var(--fw-body-lg);
-    color: var(--color-on-surface);
-    margin-bottom: 0.5rem;
 }
 
-section#projects article > a > div:nth-child(2) > p {
+section#projects .project-card__content > p {
+    flex: 1 1 auto;
+    min-height: 0;
+    margin-bottom: 1rem;
+    overflow: none;
+    color: var(--color-on-surface-variant);
     font-family: var(--font-label-sm);
     font-size: var(--fs-body-md);
+    font-weight: var(--fw-body-md);
     line-height: var(--lh-body-md);
     letter-spacing: var(--ls-body-md);
-    font-weight: var(--fw-body-md);
-    color: var(--color-on-surface-variant);
-    margin-bottom: 1rem; /* mb-4 */
-    flex-grow: 1; /* flex-1 */
 }
 
-section#projects article > a > div:nth-child(2) > div:nth-child(3) {
+section#projects .project-card__keywords {
     display: flex;
+    flex: 0 0 auto;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: auto;
 }
 
-section#projects article > a > div:nth-child(2) > div:nth-child(3) > span {
-    border-width: 1px;
-    border-color: var(--color-primary-container);
+section#projects .project-card__keywords > span {
+    padding: var(--spacing-unit) 0.5rem;
+    border: 1px solid var(--color-primary-container);
     background-color: var(--color-primary-container);
     color: #0e0e0e;
     font-family: var(--font-label-sm);
     font-size: var(--fs-label-sm);
+    font-weight: var(--fw-label-sm);
     line-height: var(--lh-label-sm);
     letter-spacing: var(--ls-label-sm);
-    font-weight: var(--fw-label-sm);
-    padding: var(--spacing-unit) 0.5rem; /* py-1 px-2 */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    section#projects .project-card {
+        transition:
+            transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+section#projects .project-card:hover {
+    box-shadow: 4px 4px 0 0 var(--color-primary-container);
+    transform: translate(-2px, -2px);
+}
+
+section#projects .project-card:active {
+    box-shadow: none;
+    transform: translate(0, 0);
+}
+
+/* Preserve the 2:1 ratio while allowing a card to fit on narrow screens. */
+@media (max-width: 32rem) {
+    section#projects .projects-carousel {
+        --project-card-width: calc(100vw - (var(--spacing-margin) * 2));
+        --project-card-height: calc((100vw - (var(--spacing-margin) * 2)) / 2);
+    }
 }
 
 section#timeline {
@@ -886,16 +855,6 @@ section#timeline > div:nth-of-type(2) > div .text > div:nth-child(2) > p {
         margin-top: 0;
     }
 
-    section#projects > div:nth-of-type(2) {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    /* md:col-span-2 — spans apply to articles 1, 4, 5, 8, ... (index % 4 in {0,3}) */
-    section#projects > div:nth-of-type(2) > article:nth-child(4n + 1),
-    section#projects > div:nth-of-type(2) > article:nth-child(4n + 4) {
-        grid-column: span 2 / span 2;
-    }
-
     section#timeline > div:nth-of-type(2) {
         margin-left: 2rem;
     }
@@ -916,14 +875,6 @@ section#timeline > div:nth-of-type(2) > div .text > div:nth-child(2) > p {
 
     section#landing div:nth-child(1) > div:last-child {
         flex-direction: row;
-    }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    section#projects article {
-        transition-property: all;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 150ms;
     }
 }
 
