@@ -592,6 +592,48 @@ section#landing p {
     max-width: 28rem;
 }
 
+@media (max-width: 639px) {
+    section#landing {
+        grid-template-columns: minmax(0, 1fr);
+        text-align: center;
+        justify-items: center;
+    }
+
+    section#landing > div {
+        min-width: 0;
+        width: 100%;
+    }
+
+    section#landing h1 {
+        font-size: var(--fs-headline-lg);
+        line-height: var(--lh-headline-lg);
+        letter-spacing: var(--ls-headline-lg);
+    }
+
+    section#landing div:nth-child(1) > div:last-child {
+        align-items: center;
+    }
+
+    section#landing div:nth-child(1) > div:last-child > a {
+        width: 100%;
+        max-width: 20rem;
+    }
+
+    section#landing div:nth-child(2) {
+        justify-content: center;
+        width: 100%;
+    }
+
+    section#landing div:nth-child(2) > div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    section#landing img {
+        width: 100%;
+    }
+}
+
 section#projects .projects-carousel {
     --project-card-height: 16rem;
     --project-card-width: calc(var(--project-card-height) * 2);
