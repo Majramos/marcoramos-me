@@ -99,58 +99,15 @@ button {
 }
 
 :root {
-    --color-secondary: #c6c6c6;
-    --color-outline-variant: #5b4138;
     --color-primary-container: #ff5f1f;
-    --color-secondary-fixed: #e2e2e2;
     --color-on-surface-variant: #e3bfb3;
-    --color-on-tertiary: #313030;
-    --color-error: #ffb4ab;
-    --color-on-tertiary-fixed-variant: #474646;
     --color-surface-container-lowest: #0e0e0e;
-    --color-surface-variant: #353534;
     --color-primary: #ffb59c;
-    --color-on-background: #e5e2e1;
-    --color-surface-container-highest: #353534;
     --color-surface-container: #201f1f;
-    --color-background: #131313;
-    --color-surface-container-low: #1c1b1b;
-    --color-on-secondary-fixed: #1a1c1c;
-    --color-inverse-primary: #ab3600;
     --color-outline: #aa897f;
-    --color-on-secondary-fixed-variant: #454747;
-    --color-on-tertiary-container: #2d2c2c;
-    --color-secondary-container: #454747;
-    --color-surface-tint: #ffb59c;
-    --color-primary-fixed-dim: #ffb59c;
-    --color-on-secondary: #2f3131;
-    --color-on-primary-container: #561700;
-    --color-inverse-on-surface: #313030;
-    --color-tertiary-fixed: #e5e2e1;
-    --color-surface-bright: #393939;
-    --color-on-error-container: #ffdad6;
     --color-surface-container-high: #2a2a2a;
-    --color-on-secondary-container: #b5b5b5;
-    --color-on-tertiary-fixed: #1c1b1b;
     --color-on-surface: #e5e2e1;
-    --color-inverse-surface: #e5e2e1;
-    --color-tertiary-container: #959393;
-    --color-on-primary-fixed: #390c00;
-    --color-tertiary-fixed-dim: #c9c6c5;
-    --color-secondary-fixed-dim: #c6c6c6;
-    --color-on-primary-fixed-variant: #832700;
-    --color-error-container: #93000a;
-    --color-surface-dim: #131313;
-    --color-primary-fixed: #ffdbcf;
-    --color-tertiary: #c9c6c5;
-    --color-on-primary: #5c1900;
-    --color-on-error: #690005;
     --color-surface: #131313;
-
-    --radius-default: 0.25rem;
-    --radius-lg: 0.5rem;
-    --radius-xl: 0.75rem;
-    --radius-full: 9999px;
 
     --spacing-margin: 32px;
     --spacing-gutter: 24px;
@@ -158,22 +115,15 @@ button {
     --spacing-unit: 4px;
 
     --font-label-sm: "JetBrains Mono", monospace;
-    --font-button: "Inter", sans-serif;
     --font-body-lg: "Inter", sans-serif;
     --font-body-md: "Inter", sans-serif;
     --font-display-lg: "Space Grotesk", sans-serif;
     --font-headline-lg: "Space Grotesk", sans-serif;
-    --font-headline-lg-mobile: "Space Grotesk", sans-serif;
 
     --fs-label-sm: 12px;
     --lh-label-sm: 1;
     --ls-label-sm: 0.05em;
     --fw-label-sm: 500;
-
-    --fs-button: 14px;
-    --lh-button: 1;
-    --ls-button: 0.02em;
-    --fw-button: 600;
 
     --fs-body-lg: 18px;
     --lh-body-lg: 1.6;
@@ -194,11 +144,6 @@ button {
     --lh-headline-lg: 1.2;
     --ls-headline-lg: -0.02em;
     --fw-headline-lg: 600;
-
-    --fs-headline-lg-mobile: 24px;
-    --lh-headline-lg-mobile: 1.2;
-    --ls-headline-lg-mobile: -0.01em;
-    --fw-headline-lg-mobile: 600;
 
     --tw-contrast: contrast(1.25);
     --tw-grayscale: grayscale(100%);
@@ -326,10 +271,6 @@ nav div.shortcuts a:hover {
     padding: 0.5rem 0;
 }
 
-nav button {
-    align-items: center;
-}
-
 nav button.cv,
 section#error button.cv {
     border-width: 1px;
@@ -361,14 +302,6 @@ section#error button.cv:hover {
     transform: translate(-2px, -2px);
 }
 
-nav div.menu {
-    display: inline-block;
-}
-
-nav div.menu:hover > button {
-    display: none;
-}
-
 @media (min-width: 768px) {
     nav > div > a:nth-child(1) {
         font-size: 32px;
@@ -393,7 +326,6 @@ nav div.menu:hover > button {
 footer {
     background: var(--color-surface-container-lowest);
     width: 100%;
-    bottom: 0;
     border-top: 1px solid var(--color-outline);
     display: flex;
     flex-direction: column;
@@ -420,7 +352,6 @@ footer > div:nth-child(2) {
     font-family: var(--font-label-sm);
     font-size: var(--fs-label-sm);
     line-height: var(--lh-label-sm);
-    letter-spacing: var(--ls-label-sm);
     font-weight: var(--fw-label-sm);
     text-transform: uppercase;
     letter-spacing: 0.1em; /* tracking-widest */
@@ -654,11 +585,6 @@ section#projects .projects-carousel {
     overflow-x: hidden;
     overflow-y: hidden;
     overscroll-behavior-x: contain;
-    scroll-snap-type: none;
-    scroll-padding-inline: var(--spacing-margin);
-    scrollbar-width: thin;
-    scroll-behavior: auto;
-
     padding: 1rem;
 }
 
@@ -670,8 +596,6 @@ section#projects .project-card {
     overflow: hidden;
     position: relative;
     border: 1px solid var(--color-primary-container);
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
 }
 
 section#projects .project-card:nth-child(even) {
@@ -680,7 +604,7 @@ section#projects .project-card:nth-child(even) {
 
 section#projects .project-card:focus-within {
     outline: 2px solid var(--color-primary);
-    outline-offset: 4px;auto
+    outline-offset: 4px;
 }
 
 section#projects .project-card > a {
@@ -732,7 +656,7 @@ section#projects .project-card__content > p {
     flex: 1 1 auto;
     min-height: 0;
     margin-bottom: 1rem;
-    overflow: none;
+    overflow: visible;
     color: var(--color-on-surface-variant);
     font-family: var(--font-label-sm);
     font-size: var(--fs-body-md);
@@ -838,7 +762,7 @@ section#timeline > div:nth-of-type(2) > div .square {
     height: 0.5rem;
     border-width: 1px;
     --tw-border-opacity: 1;
-    border-color: rgb(255 95 31 / var(--tw-bg-opacity, 1));
+    border-color: rgb(255 95 31 / var(--tw-border-opacity, 1));
     --tw-bg-opacity: 1;
     background-color: rgb(255 95 31 / var(--tw-bg-opacity, 1));
 }
