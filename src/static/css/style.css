@@ -742,6 +742,26 @@ section#projects .project-card:active {
     section#projects .projects-carousel {
         --project-card-width: calc(100vw - (var(--spacing-margin) * 2));
         --project-card-height: calc((100vw - (var(--spacing-margin) * 2)) / 2);
+
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-columns: auto;
+        gap: var(--project-card-gap);
+        overflow: visible;
+        padding: 1rem;
+    }
+
+    section#projects .project-card {
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        min-height: 16rem;
+    }
+
+    section#projects .project-card:nth-child(even) {
+        margin-left: 0;
     }
 }
 
