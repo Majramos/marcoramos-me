@@ -1,6 +1,6 @@
 .RECIPEPREFIX := $() $()
 
-.PHONY: install fmt lint style test verify build clean ping
+.PHONY: install fmt lint style test verify build clean ping setup-pre-commit
 
 install:
     uv sync
@@ -10,6 +10,7 @@ fmt:
 
 lint:
     uv run ruff check .
+    uv run ruff format --check
 
 style:
     uv run mypy scripts tests
@@ -31,3 +32,7 @@ clean:
 
 ping:
     ping -c 3 marcoramos.me
+
+setup-pre-commit:
+    uv run pre-commit install
+    uv run pre-commit install --hook-type commit-msg

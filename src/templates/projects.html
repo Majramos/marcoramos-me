@@ -2,17 +2,25 @@
     <div class="title">
         <h2>PROJECTS</h2>
     </div>
-    <div>
+
+    <div
+        class="projects-carousel"
+        aria-label="Project carousel"
+        role="region"
+        tabindex="0"
+    >
         {% for project in projects %}
-        <article id="{{ project.id }}">
+        <article id="{{ project.id }}" class="project-card">
             <a href="{{ project.url }}">
-                <div>
+                <div class="project-card__meta">
                     <span>{{ project.name }}</span>
                 </div>
-                <div>
+
+                <div class="project-card__content">
                     <h3>{{ project.name | replace('-', ' ') | title }}</h3>
                     <p>{{ project.description }}</p>
-                    <div>
+
+                    <div class="project-card__keywords">
                         {% for keyword in project.keywords %}
                         <span>{{ keyword }}</span>
                         {% endfor %}
