@@ -13,7 +13,8 @@
     "github": "https://github.com/Majramos",
     "codeberg": "https://codeberg.org/majramos",
     "error": "./404.html",
-    "cv_download": "./marco_ramos_cv.pdf"
+    "cv_download": "./marco_ramos_cv.pdf",
+    "notebook": "https://notebook.marcoramos.me"
   },
   "footer_copyright_year": "2026",
   "introduction": [
