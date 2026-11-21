@@ -1,6 +1,5 @@
 import re
 
-
 from scripts.minifiers.protocol import StringMinimizer
 
 

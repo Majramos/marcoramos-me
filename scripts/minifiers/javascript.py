@@ -170,7 +170,6 @@ def _minimize_javascript(source: str) -> str:
             "??=",
             "<<=",
             ">>=",
-            ">>>",
         }
         two_char_operators = {
             "==",
@@ -195,7 +194,6 @@ def _minimize_javascript(source: str) -> str:
             "|=",
             "^=",
             "?.",
-            "??",
         }
 
         candidate = source[i : i + 3]
@@ -236,10 +234,7 @@ def _minimize_javascript(source: str) -> str:
         if previous_kind == "word" and current_kind in {"string", "regex"}:
             return True
 
-        if previous_kind in {"string", "regex"} and current_kind == "word":
-            return True
-
-        return False
+        return bool(previous_kind in {"string", "regex"} and current_kind == "word")
 
     result: list[str] = []
     previous: tuple[str, str] | None = None

@@ -1,9 +1,7 @@
 import json
 from pathlib import Path
-from typing import TypeAlias
 
-
-JsonValue: TypeAlias = (
+type JsonValue = (
     None | bool | int | float | str | list["JsonValue"] | dict[str, "JsonValue"]
 )
 

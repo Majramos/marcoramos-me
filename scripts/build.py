@@ -3,10 +3,10 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from scripts.constants import PAGES, TEMPLATES, DATA, BUILD, STATIC
-from scripts.minify import minify_file
-from scripts.minifiers import CSSMinimizer, HTMLMinimizer, JavaScriptMinimizer
+from scripts.constants import BUILD, DATA, PAGES, STATIC, TEMPLATES
 from scripts.data import JsonValue, load_data
+from scripts.minifiers import CSSMinimizer, HTMLMinimizer, JavaScriptMinimizer
+from scripts.minify import minify_file
 
 
 def _reset_build_dir(build_dir: Path) -> None:
