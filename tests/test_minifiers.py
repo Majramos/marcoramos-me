@@ -3,7 +3,6 @@ import pytest
 from scripts.minifiers import CSSMinimizer, JavaScriptMinimizer
 from scripts.minify import minify_file
 
-
 css_minimizer = CSSMinimizer()
 javascript_minimizer = JavaScriptMinimizer()
 

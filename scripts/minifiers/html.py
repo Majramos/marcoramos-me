@@ -2,7 +2,6 @@ import re
 
 from scripts.minifiers.protocol import StringMinimizer
 
-
 _RAW_TEXT_TAGS = {"pre", "textarea", "script", "style"}
 
 _COMMENT_RE = re.compile(r"<!--(?!\[if)[\s\S]*?-->", re.IGNORECASE)

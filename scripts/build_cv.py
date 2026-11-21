@@ -6,7 +6,6 @@ from fpdf import FPDF
 from scripts.constants import BUILD, DATA, STATIC
 from scripts.data import load_data
 
-
 PAGE_MARGIN: Final = 15
 BODY_FONT_SIZE: Final = 9
 OUTPUT_PATH: Final = BUILD / "marco_ramos_cv.pdf"
